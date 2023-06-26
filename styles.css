@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Proxima Nova;
+}
+
+body{
+    background: linear-gradient(to right, #ffc659, #6cabdd);
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.container{
+    position: relative;
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px 30px;
+}
+
+.container .logo img{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 180px;
+}
+
+.container .title{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 20px 0 20px 0;
+
+}
+
+.container form .input-box{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+}
+
+.container form .input-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.container form .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    background: #ccc;
+    left: 0;
+    right: 0;
+    
+   
+    
+}
+
+.container form .underline:after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 0;
+    right: 0;
+    background: #6cabdd;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus~.underline:after,
+.container form .input-box input:valid~.underline:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container form .button{
+    margin: 40px 0 20px 0;
+}
+
+.container form .input-box input[type="submit"]{
+    background: #6cabdd;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+}
+
+.container form .input-box input[type="submit"]:hover{
+    background: #ffc659;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    letter-spacing: 10px;
+    font-weight: 500;
+}
+
+.container .or{
+display: grid;
+grid-template-columns: 1fr auto 1fr;
+color: rgba(0,0,0,.4);
+align-items: center;
+gap: 20px;
+
+}
+.container .or::before,
+.container .or::after{
+    content: '';
+    height: 1px;
+    flex: 1px;
+    background: rgb(0,0,0,.1);
+}
+
+.container .google a,
+.container .facebook a,
+.container .github a{
+   display: block;
+   width: 100%;
+   height: 45px;
+   text-decoration: none;
+   font-size: 16px;
+   padding-left: 20px;
+   color: #fff;
+   border-radius: 10px;
+   line-height: 10px;
+
+
+}
+
+
+
+.container .google a{
+    background: #1A81F3;
+    margin: 20px 0 15px 0;
+    transition: all 0.3s ease;
+}
+
+.container .google a:hover{
+background: #1d87ff;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+
+
+
+.container .facebook a{
+    background: #3b5998;
+    margin: 20px 0 15px 0;
+    transition: all 0.3s ease;
+}
+
+.container .facebook a:hover{
+    background: #4e74c7;
+    border-radius: 20px;
+    transition: all 0.3 ease;
+}
+
+
+.container .github a{
+    background: #24292e;
+    margin: 20px 0 15px 0;
+    transition: all 0.3s ease;
+}
+
+.container .github a:hover{
+    background: #2c33f8;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.container .google a i,
+.container .facebook a i,
+.container .github a i{
+    font-size: 22px;
+    padding-top: 10px;
+    padding-right: 22px;
+}
